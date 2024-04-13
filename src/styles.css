@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  background-image: url('../src/assets/img/skully_hand.gif');
+  background-size: cover; /* Adjust as needed */
+  background-position: center; /* Adjust as needed */
+  /* Additional styles */
+}

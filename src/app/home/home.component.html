@@ -1,0 +1,30 @@
+<div class="wrapper">
+  <div class="black-boxes">
+
+      <div class="black-box" *ngFor="let box of blackBoxes">
+        <button class="favorite-button">Add to Cart</button>
+        <div class="heart-icon" (click)="toggleFavorite(box.id)">
+          <img [src]="box.isFavorite ? 'assets/img/heart_closed.png' : 'assets/img/heart.png'" alt="Heart Icon">
+        </div>
+        <div class="sans-container">
+          <img class="sans" src="assets/img/sans.gif" alt="Sans GIF">
+          <img class="sans" src="assets/img/sans.gif" alt="Sans GIF">
+        </div>
+        <div class="text">
+          <img class="product" [src]="box.imageSrc" alt="Product Image">
+        </div>
+        <div class="hidden_hover_text">
+          <p>{{ box.productName }}</p>
+          <p class="price">Price: {{ box.price }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="navbar">
+  <a href="#Deals" class="active">Deals</a>
+  <a href="#News">News</a>
+  <a href="#Blog">Blog</a>
+  <a><button class="Favourite">Favorite</button></a>
+</div>

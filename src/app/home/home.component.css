@@ -1,0 +1,187 @@
+/* Set background color of the entire page to black */
+
+/* Style the black boxes */
+.wrapper{
+  overflow: hidden;
+  display: flex;
+  justify-content: center; /* Horizontally center content */
+  align-items: center; /* Vertically center content */
+   /* Ensure full height of viewport */
+
+}
+.black-boxes {
+  display: flex;
+  align-self: center;
+  flex-wrap: wrap;
+  justify-content: center;
+   /* Adjust as needed */
+  margin-bottom: 0;
+  margin-top: 100px;
+  width: 100%;
+  height: 100%;
+}
+
+.black-box {
+  position: relative;
+  width: 20vw; /* Subtract margins */
+  margin: 0 60px;
+  height: 40vh;
+  background-color: purple;
+  box-sizing: border-box;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  transition: width 0.3s, height 0.3s;
+}
+
+.black-box:hover {
+  width: 25vw;
+  height: 46vh;
+}
+
+.sans-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.sans {
+  width: 50px;
+  height: 50px;
+}
+
+.text {
+  text-align: start;
+  color: white;
+  margin: 0 auto;
+  position: absolute;
+  z-index: 2;
+}
+
+.product {
+  height: 35%;
+  width: 30vh;
+  z-index: 2;
+}
+
+.hidden_hover_text {
+  display: none;
+  position: absolute;
+  bottom: 10px; /* Adjust as needed */
+  left: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+  text-align: start;
+  color: #f1f1f1;
+  transition: opacity 0.9ms ease;
+  pointer-events: none;
+  font-weight: bold;
+}
+
+.heart-icon {
+  position: absolute;
+  top: 20%; /* Adjust as needed */
+  right: 87%;
+  cursor: pointer;
+  display: none;
+  z-index: 200;
+}
+.black-box:hover .heart-icon{
+  display: block;
+}
+/* Style the heart icon */
+.heart-icon img {
+  width: 30px; /* Set the width of the heart icon */
+  height: 30px; /* Set the height of the heart icon */
+}
+
+.heart-icon i {
+  color: #ff0000; /* Example color */
+  font-size: 20px;
+}
+.price{
+  position: relative;
+  align-self: center;
+  text-shadow: black;
+  text-shadow: 6px 6px 6px #333;
+  margin-top: 0;
+  font-size: 17px;
+  font-weight: bold;
+  color: red;
+}
+
+.black-box:hover .hidden_hover_text {
+  display: block;
+  position: relative;
+  text-align: start;
+  color: #f1f1f1;
+  margin-top: 80%;
+  margin-bottom: 0;
+  transition: opacity 0.9ms ease;
+}
+
+/* Styles for the bottom bar */
+
+
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+/* Style the links inside the navigation bar */
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.navbar a.active {
+  background-color: purple;
+  color: white;
+}
+.favorite-button {
+  background-color: black; /* Example color */
+  color: red; /* Make the text white */
+  padding: 10px 10px;
+  border: none;
+  border-radius: 50px;
+  margin-right: 10px; /* Adjust as needed */
+  margin-top: 80%;
+}
+
+.Favourite {
+  cursor: pointer;
+  border: 2px solid #3498db;
+  background-color: rgba(24, 100, 171, 0.1);
+  height: 30px;
+  width: auto; /* Let the width adjust to the content */
+  padding: 5px 10px; /* Adjust the padding as needed */
+  color: #3498db;
+  font-size: 1em;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
+}

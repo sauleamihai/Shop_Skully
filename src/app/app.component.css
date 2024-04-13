@@ -1,0 +1,19 @@
+#container {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../assets/img/skully_hand.gif");
+  background-size: cover;
+  background-repeat: no-repeat; /* Ensure the image doesn't repeat */
+  background-position: center; /* Center the background image */
+}
+
+:host {
+  display: block;
+  background-image: url("../assets/img/skully_hand.gif");
+  width: 100%;
+  height: 100%;
+  background-size: 130% auto; /* Adjust the width and height as needed */
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -10;
+}
