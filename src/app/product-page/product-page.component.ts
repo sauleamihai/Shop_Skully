@@ -1,4 +1,18 @@
 import { Component, Renderer2, ViewEncapsulation } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ProduseService } from '../produse.service';
+
+interface BlackBox {
+  id:number;
+  imageSrc: string;
+  imgButtom1:string;
+  imgButtom2:string;
+  imgButtom3:string;
+  productName: string;
+  price: string;
+  isFavorite: boolean;
+  isVisible:boolean;
+}
 
 @Component({
   selector: 'app-product-page',
@@ -8,7 +22,16 @@ import { Component, Renderer2, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./product-page.component.css']
 })
 export class ProductPageComponent {
-  constructor(private renderer: Renderer2) {}
+  product: BlackBox | undefined;
+
+  constructor(
+    private route: ActivatedRoute,
+    private renderer: Renderer2,
+    private produseService: ProduseService
+  ) {
+    const productId = Number(this.route.snapshot.paramMap.get('id'));
+    this.product = this.produseService.getBlackBoxById(productId);
+  }
 
   toggleAnimation() {
     const images = document.querySelectorAll('.pictute_buttom img');
@@ -30,5 +53,5 @@ export class ProductPageComponent {
         button.style.color = '#fff';
       }
     }
-}
+  }
 }

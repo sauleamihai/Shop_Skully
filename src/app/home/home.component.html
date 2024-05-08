@@ -1,6 +1,6 @@
 <div class="wrapper">
   <div class="black-boxes">
-    <a *ngFor="let box of blackBoxes"  class="black-box-link" [ngClass]="{'hidden': !box.isVisible}">
+    <a *ngFor="let box of blackBoxes"  class="black-box-link" [ngClass]="{'hidden': !box.isVisible } ">
       <div class="black-box">
         <div class="favorite-button">Add to Cart</div>
         <div class="heart-icon" (click)="toggleFavorite(box.id)">

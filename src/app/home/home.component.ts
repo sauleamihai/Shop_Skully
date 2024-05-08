@@ -1,11 +1,15 @@
-import { Component } from '@angular/core';
+import { Component,inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {RouterLink, RouterLinkActive} from "@angular/router";
+import {ProduseService} from "../produse.service";
 
 // Define an interface for the type of objects in the blackBoxes array
 interface BlackBox {
   id:number;
   imageSrc: string;
+  imgButtom1:string;
+  imgButtom2:string;
+  imgButtom3:string;
   productName: string;
   price: string;
   isFavorite: boolean;
@@ -21,14 +25,19 @@ interface BlackBox {
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
-  blackBoxes: BlackBox[] = [
-    {id: 1, imageSrc: 'assets/img/shirt1.png', productName: 'Tricou Corpse', price: '19.99 $', isFavorite: false,isVisible:true},
-    {id: 2, imageSrc: 'assets/img/shirt1.png', productName: 'Tricou Corpse', price: '19.99 $', isFavorite: false,isVisible:true},
-    {id: 3, imageSrc: 'assets/img/pantaloni_1.png', productName: 'Pantaloni Corpse', price: '29.99 $', isFavorite: false,isVisible:true},
-    {id: 4, imageSrc: 'assets/img/shirt_2.png', productName: 'Tricou Alb cu Imprimeu', price: '29.99 $', isFavorite: false,isVisible:true},
-    {id: 5, imageSrc: 'assets/img/shirt1.png', productName: 'Tricou Corpse', price: '19.99 $', isFavorite: false,isVisible:true},
-    {id: 6, imageSrc: 'assets/img/poste_shirt.png', productName: 'Tricou Post Malone', price: '16.99 $', isFavorite: false,isVisible:true}
-  ];
+  blackBoxes: BlackBox[] = [];
+
+  constructor(private produseService: ProduseService) { }
+
+  ngOnInit(): void {
+    // Fetch black boxes data when the component initializes
+    this.fetchBlackBoxes();
+  }
+
+  fetchBlackBoxes() {
+    // Call the service method to get black boxes data
+    this.blackBoxes = this.produseService.getBlackBoxes();
+  }
 
   favourites: BlackBox[] = [];
   favouritePressed: boolean = false;

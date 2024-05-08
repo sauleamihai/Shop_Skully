@@ -155,3 +155,27 @@
   padding: 10px; /* Optional: Add padding to create space between the image and the border */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Example box shadow */
 }
+
+.white_box1 {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 8vh;
+  width: 20vw;
+  background-color: white;
+  margin-top: 0px;
+  border-radius: 20px;
+  text-align: center; /* Center text horizontally */
+  text-size-adjust: 30px;
+  margin-bottom: 20px;
+
+}
+.free_ship1{
+  font-weight: bold;
+  font-size: 20px;
+  color: #9A9DB6;
+}
+
+.product_price{
+  color: #9A9DB6;
+}

@@ -1,6 +1,10 @@
 <div class="wrapper">
   <div class="product_block">
-    <img src="assets/img/poste_shirt.png">
+    <div class="white_box1">
+      <div class="free_ship1"> {{product?.productName}} <div class="product_price">  {{product?.price}}</div>
+      </div>
+    </div>
+    <img [src]="product?.imageSrc">
   </div>
   <div class="product_discription"></div>
   <div class="choose_size">
@@ -15,6 +19,7 @@
     <button class="add_to_basket_button">ADAUGATI IN COSUL DE CUMPARATURI</button>
     <button class="add_to_favourite"></button>
     <div class="shiping_detail">
+
       <div class="white_box">
         <div class="free_ship">Ridicare de la magazin gratuit
           <div class="text_gratuit">GRATUIT</div>
@@ -28,9 +33,9 @@
     </div>
   </div>
   <div class="pictures_buttom">
-    <div class="pictute_buttom"><img class="image_product" src="assets/img/image_postee_one.png" (click)="toggleAnimation()"></div>
-    <div class="pictute_buttom"><img class="image_product" src="assets/img/postee2.png" (click)="toggleAnimation()"></div>
-    <div class="pictute_buttom"><img class="image_product" src="assets/img/postee_tree.png" (click)="toggleAnimation()"></div>
+    <div class="pictute_buttom"><img class="image_product" [src]="product?.imgButtom1" (click)="toggleAnimation()"></div>
+    <div class="pictute_buttom"><img class="image_product" [src]="product?.imgButtom2" (click)="toggleAnimation()"></div>
+    <div class="pictute_buttom"><img class="image_product" [src]="product?.imgButtom3" (click)="toggleAnimation()"></div>
   </div>
 </div>
 <div class="bottom_bar">
