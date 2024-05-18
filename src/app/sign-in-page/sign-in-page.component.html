@@ -1,0 +1,26 @@
+
+
+<div class="container">
+  <div class="left-panel">
+    <h2>Not a member yet?</h2>
+    <p>Sign up & enjoy our service</p>
+    <button class="sign-up-btn"> <a routerLink="/sign_up">Sign Up →</a></button>
+    <div class="social-icons">
+      <i class="fa fa-twitter"></i>
+      <i class="fa fa-facebook"></i>
+      <i class="fa fa-behance"></i>
+    </div>
+  </div>
+  <div class="right-panel">
+    <div class="login-form">
+      <h2>Log In</h2>
+      <form>
+        <input type="text" name="email" [(ngModel)]="LogInObj.email" placeholder="Email*" required>
+        <input type="password" name="password" [(ngModel)]="LogInObj.password" placeholder="Password*" required>
+        <button (click)="OnLogIn()">LOG IN</button>
+        <a href="/sign_up">Forgot Password?</a>
+        <a routerLink="/sign_up">Not a member yet?</a>
+      </form>
+    </div>
+  </div>
+</div>

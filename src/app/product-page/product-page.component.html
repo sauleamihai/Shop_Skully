@@ -4,7 +4,16 @@
       <div class="free_ship1"> {{product?.productName}} <div class="product_price">  {{product?.price}}</div>
       </div>
     </div>
-    <img [src]="product?.imageSrc">
+    <div class="container">
+      <div class="box">
+        <span></span>
+        <div class="content">
+          <img [src]="product?.imageSrc">
+        </div>
+      </div>
+
+    </div>
+
   </div>
   <div class="product_discription"></div>
   <div class="choose_size">

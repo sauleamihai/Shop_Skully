@@ -1,0 +1,97 @@
+.container {
+  display: flex;
+  width: 800px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 30vh;
+  margin-bottom: 30vh;
+}
+
+.left-panel {
+  background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+  color: white;
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.left-panel h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.left-panel p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.sign-up-btn {
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons i {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.right-panel {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 300px;
+}
+
+.login-form h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.login-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-form button {
+  background-color: #5a2254;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 100px;
+}
+
+.login-form a {
+  color: #5a2254;
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+}

@@ -2,6 +2,7 @@ import { Component,inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {RouterLink, RouterLinkActive} from "@angular/router";
 import {ProduseService} from "../produse.service";
+import {PlatformLocation} from "@angular/common";
 
 // Define an interface for the type of objects in the blackBoxes array
 interface BlackBox {
@@ -27,7 +28,12 @@ interface BlackBox {
 export class HomeComponent {
   blackBoxes: BlackBox[] = [];
 
-  constructor(private produseService: ProduseService) { }
+  constructor(private produseService: ProduseService,private platforLocation:PlatformLocation) {
+    history.pushState(null,'',location.href);
+    this.platforLocation.onPopState(()=>{
+      history.pushState(null,'',location.href)
+    })
+  }
 
   ngOnInit(): void {
     // Fetch black boxes data when the component initializes

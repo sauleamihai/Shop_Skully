@@ -10,18 +10,18 @@ header {
   justify-content: space-between;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 999;
-  background-color:black;
 }
 
 header ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  align-items: center;
 }
 
 header li {
   margin: 0 7px;
-  display: inline;
 }
 
 header li a {
@@ -38,14 +38,11 @@ header li a:hover {
   background-color: grey;
 }
 
-
 .signin-btn,
 .login-btn {
   color: black;
   background-color: grey;
   border: none;
-  top: 50%;
-  left: 50%;
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
@@ -57,13 +54,8 @@ header li a:hover {
   background-color: white;
 }
 
-.button-container {
-  margin-left: auto;
-}
-
 .hover_button {
   position: relative;
-  display: inline-block;
 }
 
 .hiddenImg {
@@ -85,17 +77,16 @@ header li a:hover {
   height: 35px;
   border: 2px solid #f1f1f1;
   border-radius: 50%;
-  margin-left: 60px;
-  margin-right: 50px;
-  margin-top: 37px;
-  background:transparent;
+  margin: 0 50px;
+  background: transparent;
 }
-.user-icon1{
+
+.user-icon1 {
   width: 30px;
   height: 35px;
-  margin-left: 10px;
-  margin-right: 20px;
+  margin: 0 20px;
 }
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -106,9 +97,8 @@ header li a:hover {
   position: absolute;
   background-color: grey;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  left: 0;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -131,10 +121,8 @@ header li a:hover {
 
 .dropbtn {
   background-color: white;
-  color: white;
-  padding: 5px;
-  font-size: 18px;
   border: none;
+  padding: 5px;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
@@ -148,7 +136,6 @@ header li a:hover {
   transform: scale(1.1);
 }
 
-
 .title {
   font-family: 'Skull Font', sans-serif;
   color: #dddddd;
@@ -160,8 +147,22 @@ header li a:hover {
   background: none;
   padding: 0;
   cursor: pointer;
+  margin-right: 40px;
+  align-items: center;
 }
 
-.BODY{
+.user-dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user_name {
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.BODY {
   background-color: black;
 }

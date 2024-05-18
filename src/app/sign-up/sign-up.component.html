@@ -1,0 +1,28 @@
+
+<div class="container">
+  <div class="left-panel">
+    <h2>Signed up? Go back to sign in</h2>
+    <p>Sign up & enjoy our service</p>
+    <button class="sign-up-btn">
+      <a routerLink="/sign_in_page">Sign In →</a>
+    </button>
+    <div class="social-icons">
+      <i class="fa fa-twitter"></i>
+      <i class="fa fa-facebook"></i>
+      <i class="fa fa-behance"></i>
+    </div>
+  </div>
+  <div class="right-panel">
+    <div class="login-form">
+      <h2>Sign up</h2>
+      <form>
+        <input type="text" name="UserName" [(ngModel)]="signUpObj.name" placeholder="Username*" required>
+        <input type="email" name="email" [(ngModel)]="signUpObj.email" placeholder="Email*" required>
+        <input type="password" name="password" [(ngModel)]="signUpObj.password" placeholder="Password*" required>
+        <input type="password" name="confirm_password" [(ngModel)]="confirmPassword" placeholder="Confirm password*" required>
+        <button type="button" (click)="onRegister()">Sign up</button>
+        <a routerLink="/">Go back to sign in</a>
+      </form>
+    </div>
+  </div>
+</div>
